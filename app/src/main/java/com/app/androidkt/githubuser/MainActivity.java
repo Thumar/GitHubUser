@@ -2,11 +2,12 @@ package com.app.androidkt.githubuser;
 
 import android.arch.lifecycle.LifecycleActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.app.androidkt.githubuser.ui.UserDetailFragment;
 import com.app.androidkt.githubuser.ui.UserListFragment;
 
-public class MainActivity extends LifecycleActivity {
+public class MainActivity extends AppCompatActivity {
 
     private UserListFragment userListFragment;
 

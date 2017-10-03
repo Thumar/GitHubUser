@@ -1,12 +1,11 @@
 package com.app.androidkt.githubuser.ui;
 
 
-import android.app.Fragment;
-import android.arch.lifecycle.LifecycleFragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -29,7 +28,7 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UserListFragment extends LifecycleFragment {
+public class UserListFragment extends Fragment {
 
 
     public static final String TAG = "UserListFragment";
@@ -40,7 +39,7 @@ public class UserListFragment extends LifecycleFragment {
     TextView loadingMessage;
 
 
-   private SharedViewModel sharedViewModel;
+    private SharedViewModel sharedViewModel;
 
     UserClickCallBack userClickCallBack = new UserClickCallBack() {
         @Override

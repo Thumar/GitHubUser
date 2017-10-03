@@ -1,7 +1,6 @@
 package com.app.androidkt.githubuser.ui;
 
 
-import android.arch.lifecycle.LifecycleFragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -28,7 +27,7 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UserDetailFragment extends LifecycleFragment {
+public class UserDetailFragment extends Fragment {
 
     public static final String TAG = "UserDetailFragment";
 
@@ -66,7 +65,7 @@ public class UserDetailFragment extends LifecycleFragment {
         ButterKnife.bind(this, view);
 
         userDetailViewModel = ViewModelProviders.of(this).get(UserDetailViewModel.class);
-        sharedViewModel=ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
+        sharedViewModel = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
 
         userDetailViewModel.init(sharedViewModel);
 
